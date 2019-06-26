@@ -8,6 +8,7 @@ const addon = require('bindings')('factorial.node')
 export class FactorialService {
   async calculate(number) {
     const result = addon.factorial(parseInt(number))
+    console.log(result)
     return { result }
   }
 }
