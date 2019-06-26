@@ -1,0 +1,52 @@
+{
+  "name": "factorial",
+  "version": "1.0.0",
+  "description": "factorial",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.js\"",
+    "start": "babel-node index.js",
+    "dev": "nodemon",
+    "build": "node-gyp configure build",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.3.2",
+    "@nestjs/core": "^6.3.2",
+    "@nestjs/microservices": "^6.3.2",
+    "@nestjs/passport": "^6.1.0",
+    "@nestjs/platform-express": "^6.3.2",
+    "@nestjs/websockets": "^6.3.2",
+    "bindings": "^1.5.0",
+    "dotenv": "^8.0.0",
+    "nan": "^2.14.0",
+    "node-gyp": "^5.0.1",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "@nestjs/testing": "^6.3.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.js$",
+    "coverageDirectory": "../coverage"
+  }
+}
